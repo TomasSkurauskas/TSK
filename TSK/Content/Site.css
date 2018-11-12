@@ -22,3 +22,88 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.navbar-side {
+    height: 100%;
+    width: 35%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 0;
+    list-style: none;
+    border-left: 2px solid #ccc;
+    background-color: #f7f7f9;
+    overflow-y: scroll;
+    z-index: 1000;
+}
+
+.navbar-side-item {
+    padding: .5rem 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+    height: 2.5rem;
+}
+
+.side-link {
+    padding-left: 2rem;
+}
+
+.navbar-side {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: 300ms ease;
+    transition: 300ms ease;
+}
+
+.reveal {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transition: 300ms ease;
+    transition: 300ms ease;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    background-color: #696969;
+    opacity: 0.6;
+    z-index: 990;
+}
+
+.navbar-fixed-top.scrolled {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.navbar-fixed-top.scrolled .nav-link {
+    color:#555;
+}
+
+/*
+@media (max-width: 575.98px) {
+    .navbar-side {
+        width: 85%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-side {
+        width: 50%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-side {
+        width: 25%;
+    }
+}*/

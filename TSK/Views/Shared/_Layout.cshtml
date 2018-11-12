@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using System.Collections.Specialized
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,36 +7,105 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <style>
+      
+    </style>
 
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="~/Content/all.min.css" rel="stylesheet" />
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-fixed-top"  role="navigation">
+        <a class="navbar-brand" href="#" style="color: white;"><h2>Tomas Skurasukas</h2></a>
+
+        <button class="navbar-toggler " style="color: white; z-index: 5" id="navbarSideButton">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse "id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto align-content-center" >
+                <li class="nav-item active nav-link">
+                    @Html.ActionLink("Home", "Index", "Home")
+                </li>
+                <li class="nav-item  nav-link">
+                    @Html.ActionLink("Test", "Test", "Home")
+                </li>
+
+                <li class="nav-item  nav-link">
+                    @Html.ActionLink("About", "About", "Home")
+                </li>
+                 <li class="nav-item  nav-link">
+                     @Html.ActionLink("Contact", "Contact", "Home")
+                </li>
+                
+            </ul>
+            @Html.Partial("_LoginPartial")
         </div>
-    </div>
-    <div class="container body-content">
+
+        <ul class=" navbar-side p-2" id="navbarSide">
+            <li class="text-center">
+                <br />
+                <div><span class="fa fa-user fa-5x"></span></div>
+                @Html.Partial("_LoginPartial")
+                <hr />
+            </li>
+            <li class="nav-item active navbar-side-item">
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li class="nav-item navbar-side-item">
+                @Html.ActionLink("Test", "Test", "Home")
+            </li>
+
+            <li class="nav-item navbar-side-item">
+                @Html.ActionLink("About", "About", "Home")
+            </li>
+            <li class="nav-item navbar-side-item">
+                @Html.ActionLink("Contact", "Contact", "Home")
+            </li><li class="nav-item navbar-side-item">
+                
+            </li>
+        </ul>
+        
+        <div class="overlay"></div>
+    </nav>
+ 
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            // Open navbarSide when button is clicked
+            $('#navbarSideButton').on('click', function () {
+                $('#navbarSide').addClass('reveal');
+                $('.overlay').show();
+            });
+
+            // Close navbarSide when the outside of menu is clicked
+            $('.overlay').on('click', function () {
+                $('#navbarSide').removeClass('reveal');
+                $('.overlay').hide();
+            });
+
+        });
+    </script>
+    <div class="container-fluid body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <footer class="text-center p-0 m-0">
+           &copy; @DateTime.Now.Year - TomasSkurauskas.com
         </footer>
     </div>
+
+<script>
+    $(function () {
+        $(document).scroll(function () {
+            var $nav = $(".navbar-fixed-top");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+    });
+</script>
+
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
