@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  tsk:
+    image: ${DOCKER_REGISTRY}tsk
+    build:
+      context: .\TSK
+      dockerfile: Dockerfile

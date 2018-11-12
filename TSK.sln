@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSK", "TSK\TSK.csproj", "{51FC44D5-299A-425E-9330-C89285753C9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSK.Tests", "TSK.Tests\TSK.Tests.csproj", "{4C725542-9581-434C-8DF6-6BC21C4A25F8}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D162F88C-B24A-4A6C-9896-2E7EDB9BCDBE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51FC44D5-299A-425E-9330-C89285753C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FC44D5-299A-425E-9330-C89285753C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FC44D5-299A-425E-9330-C89285753C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FC44D5-299A-425E-9330-C89285753C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C725542-9581-434C-8DF6-6BC21C4A25F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C725542-9581-434C-8DF6-6BC21C4A25F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C725542-9581-434C-8DF6-6BC21C4A25F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C725542-9581-434C-8DF6-6BC21C4A25F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D162F88C-B24A-4A6C-9896-2E7EDB9BCDBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D162F88C-B24A-4A6C-9896-2E7EDB9BCDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D162F88C-B24A-4A6C-9896-2E7EDB9BCDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D162F88C-B24A-4A6C-9896-2E7EDB9BCDBE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0732F363-784A-403D-8D94-C12CCED88990}
+	EndGlobalSection
+EndGlobal
