@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSK.Tests", "TSK.Tests\TSK.
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{D162F88C-B24A-4A6C-9896-2E7EDB9BCDBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSK.Data", "TSK.Data\TSK.Data.csproj", "{6295E2F2-5B5B-46E4-BF19-5463CA695A43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D162F88C-B24A-4A6C-9896-2E7EDB9BCDBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D162F88C-B24A-4A6C-9896-2E7EDB9BCDBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D162F88C-B24A-4A6C-9896-2E7EDB9BCDBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6295E2F2-5B5B-46E4-BF19-5463CA695A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6295E2F2-5B5B-46E4-BF19-5463CA695A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6295E2F2-5B5B-46E4-BF19-5463CA695A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6295E2F2-5B5B-46E4-BF19-5463CA695A43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
